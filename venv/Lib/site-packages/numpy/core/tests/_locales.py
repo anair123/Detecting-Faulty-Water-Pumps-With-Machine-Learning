@@ -57,12 +57,12 @@ class CommaDecimalPointLocale:
     """
     (cur_locale, tst_locale) = find_comma_decimal_point_locale()
 
-    def setup_method(self):
+    def setup(self):
         if self.tst_locale is None:
             pytest.skip("No French locale available")
         locale.setlocale(locale.LC_NUMERIC, locale=self.tst_locale)
 
-    def teardown_method(self):
+    def teardown(self):
         locale.setlocale(locale.LC_NUMERIC, locale=self.cur_locale)
 
     def __enter__(self):

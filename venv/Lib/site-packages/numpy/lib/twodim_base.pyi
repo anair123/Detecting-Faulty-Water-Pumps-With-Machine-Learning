@@ -166,8 +166,9 @@ def histogram2d(  # type: ignore[misc]
     y: _ArrayLikeFloat_co,
     bins: int | Sequence[int] = ...,
     range: None | _ArrayLikeFloat_co = ...,
-    density: None | bool = ...,
+    normed: None | bool = ...,
     weights: None | _ArrayLikeFloat_co = ...,
+    density: None | bool = ...,
 ) -> tuple[
     NDArray[float64],
     NDArray[floating[Any]],
@@ -179,8 +180,9 @@ def histogram2d(
     y: _ArrayLikeComplex_co,
     bins: int | Sequence[int] = ...,
     range: None | _ArrayLikeFloat_co = ...,
-    density: None | bool = ...,
+    normed: None | bool = ...,
     weights: None | _ArrayLikeFloat_co = ...,
+    density: None | bool = ...,
 ) -> tuple[
     NDArray[float64],
     NDArray[complexfloating[Any, Any]],
@@ -192,8 +194,9 @@ def histogram2d(
     y: _ArrayLikeComplex_co,
     bins: Sequence[_ArrayLikeInt_co],
     range: None | _ArrayLikeFloat_co = ...,
-    density: None | bool = ...,
+    normed: None | bool = ...,
     weights: None | _ArrayLikeFloat_co = ...,
+    density: None | bool = ...,
 ) -> tuple[
     NDArray[float64],
     NDArray[Any],

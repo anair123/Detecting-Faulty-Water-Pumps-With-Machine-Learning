@@ -562,9 +562,3 @@ zipf = _rand.zipf
 # Two legacy that are trivial wrappers around random_sample
 sample = _rand.random_sample
 ranf = _rand.random_sample
-
-def set_bit_generator(bitgen: BitGenerator) -> None:
-    ...
-
-def get_bit_generator() -> BitGenerator:
-    ...

@@ -20,35 +20,35 @@ class TestABC:
     def test_floats(self):
         for t in sctypes['float']:
             assert_(isinstance(t(), numbers.Real),
-                    f"{t.__name__} is not instance of Real")
+                    "{0} is not instance of Real".format(t.__name__))
             assert_(issubclass(t, numbers.Real),
-                    f"{t.__name__} is not subclass of Real")
+                    "{0} is not subclass of Real".format(t.__name__))
             assert_(not isinstance(t(), numbers.Rational),
-                    f"{t.__name__} is instance of Rational")
+                    "{0} is instance of Rational".format(t.__name__))
             assert_(not issubclass(t, numbers.Rational),
-                    f"{t.__name__} is subclass of Rational")
+                    "{0} is subclass of Rational".format(t.__name__))
 
     def test_complex(self):
         for t in sctypes['complex']:
             assert_(isinstance(t(), numbers.Complex),
-                    f"{t.__name__} is not instance of Complex")
+                    "{0} is not instance of Complex".format(t.__name__))
             assert_(issubclass(t, numbers.Complex),
-                    f"{t.__name__} is not subclass of Complex")
+                    "{0} is not subclass of Complex".format(t.__name__))
             assert_(not isinstance(t(), numbers.Real),
-                    f"{t.__name__} is instance of Real")
+                    "{0} is instance of Real".format(t.__name__))
             assert_(not issubclass(t, numbers.Real),
-                    f"{t.__name__} is subclass of Real")
+                    "{0} is subclass of Real".format(t.__name__))
 
     def test_int(self):
         for t in sctypes['int']:
             assert_(isinstance(t(), numbers.Integral),
-                    f"{t.__name__} is not instance of Integral")
+                    "{0} is not instance of Integral".format(t.__name__))
             assert_(issubclass(t, numbers.Integral),
-                    f"{t.__name__} is not subclass of Integral")
+                    "{0} is not subclass of Integral".format(t.__name__))
 
     def test_uint(self):
         for t in sctypes['uint']:
             assert_(isinstance(t(), numbers.Integral),
-                    f"{t.__name__} is not instance of Integral")
+                    "{0} is not instance of Integral".format(t.__name__))
             assert_(issubclass(t, numbers.Integral),
-                    f"{t.__name__} is not subclass of Integral")
+                    "{0} is not subclass of Integral".format(t.__name__))
