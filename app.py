@@ -75,4 +75,3 @@ def main():
        'extraction_type_class', 'management_group', 'payment_type',
        'quality_group', 'quantity_group', 'source_class',
        'waterpoint_type_group', 'status_group', 'age']
-'''
