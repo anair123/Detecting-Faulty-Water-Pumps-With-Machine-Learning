@@ -29,24 +29,24 @@ def main():
 
 
     # get feature values
-    amount_tsh = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    funder = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    gps_height = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    installer = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    basin = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    region = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    population = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    public_meeting = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    scheme_management = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    permit = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    extraction_type_class = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    management_group = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    payment_type = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    quality_group = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    quantity_group = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    source_class = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    waterpoint_type_group = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)
-    age = st.sidebar.slider("Artist's Number of Followers", 0, 10000000, 1)    
+    amount_tsh = st.sidebar.slider(" Total static head (amount water available to waterpoint)", 0, 400000, 1)
+    funder = st.sidebar.selectbox('Who funded the well', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    gps_height = st.sidebar.slider("Altitude of the well", 0, 3000, 1)s
+    installer = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    basin = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    region = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    population = st.sidebar.slider("Artist's Number of Followers", 0, 40000, 1)
+    public_meeting = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    scheme_management = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    permit = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    extraction_type_class = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    management_group = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    payment_type = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    quality_group = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    quantity_group = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    source_class = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    waterpoint_type_group = st.sidebar.selectbox('Genre', ('Pop', 'Rock', 'Rap', 'Country', 'EDM', 'Other'))
+    age = st.sidebar.slider("Age of the Water Pump", 0, 100, 1)    
 
     # create input matrix with user response
     input_features = pd.DataFrame(columns=['amount_tsh', 'funder', 'gps_height', 'installer', 'basin', 'region',
