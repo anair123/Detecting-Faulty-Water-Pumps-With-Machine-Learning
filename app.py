@@ -6,6 +6,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 import xgboost as xgb
+from PIL import Image
 
 st.cache(allow_output_mutation=True)
 def load_pipeline_and_model():
@@ -23,10 +24,14 @@ def main():
      # load preprocessing pipeline and model
     pipeline_xgb, xgb_model = load_pipeline_and_model()
 
+
+
     # side bar and title
     st.sidebar.header('Water Pump Features')
     st.header('Water Pump Functionality Prediction App')
 
+    # load image
+    st.image('waterpump_image.png')
 
     # get feature values
     amount_tsh = st.sidebar.slider("The amount of water available to the waterpoint", 0, 400000, 1)
