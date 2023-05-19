@@ -75,6 +75,13 @@ def main():
         prediction_map = {0:'Functional',
                           1: 'Functional, but needs repair',
                           2: 'Not Functional'}
+        
+        if prediction == 0:
+            st.image('green check.png')
+        elif prediction == 1:
+            st.image('repair.png')
+        elif prediction == 2:
+            st.image('red cross.jpg')
 
         st.success(f'Water Pump Condition: {prediction_map[prediction]}')
 
