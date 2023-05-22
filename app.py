@@ -79,7 +79,7 @@ def main():
 
     st.text("")
     st.text("")
-    st.write('Click the button below after selecting the features o the water pump of interest:')
+    st.write('Click the button below after selecting the features of the water pump of interest:')
     # create button that generates prediction
     if st.button('Predict Water Pump Condition'):
 
