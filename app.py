@@ -24,14 +24,23 @@ def main():
      # load preprocessing pipeline and model
     pipeline_xgb, xgb_model = load_pipeline_and_model()
 
+    image = Image.open('waterpump_img.png')
 
 
     # side bar and title
     st.sidebar.header('Water Pump Features')
-    st.header('Water Pump Functionality Prediction App')
 
-    # load image
-    st.image('waterpump_image.png')
+    # Display header and image
+    col1, col2 = st.columns([1, 3])
+    with col1:
+        st.image(image, use_column_width=True)
+    with col2:
+        st.title("Predicting Functionality of Water Pump App")
+    #st.header('Predicting Functionality of Water Pump App')
+   
+    st.write('Predict the functionality of water pumps in Tanzania with the XGBoost model!')
+    st.write('To access the codebase for this application, please visit the following GitHub repository: https://github.com/anair123/Detecting-Faulty-Water-Pumps-With-Machine-Learning')
+
 
     # get feature values
     amount_tsh = st.sidebar.slider("The amount of water available to the waterpoint", 0, 400000, 1)
@@ -66,24 +75,28 @@ def main():
         extraction_type_class, management_group, payment_type, quality_group,
         quantity_group, source_class, waterpoint_type_group, age]
 
-
+    st.text("")
+    st.text("")
+    st.write('Click the button below after selecting the features o the water pump of interest:')
     # create button that generates prediction
     if st.button('Predict Water Pump Condition'):
+
+        # make a prediction with the xgboost model
         input_features_processed = pipeline_xgb.transform(input_features)
         prediction = xgb_model.predict(input_features_processed)[0]
 
+        # convert the yielded number to a prediction
         prediction_map = {0:'Functional',
                           1: 'Functional, but needs repair',
                           2: 'Not Functional'}
-        
-        if prediction == 0:
-            st.image('green check.png')
-        elif prediction == 1:
-            st.image('repair.png')
-        elif prediction == 2:
-            st.image('red cross.jpg')
 
-        st.success(f'Water Pump Condition: {prediction_map[prediction]}')
+
+        if prediction == 0:
+            st.success(f'Water Pump Condition: {prediction_map[prediction]}')
+        elif prediction == 1:
+            st.warning(f'Water Pump Condition: {prediction_map[prediction]}')
+        elif prediction == 2:
+            st.error(f'Water Pump Condition: {prediction_map[prediction]}') 
 
     pass
 
