@@ -24,10 +24,10 @@ def main():
      # load preprocessing pipeline and model
     pipeline_xgb, xgb_model = load_pipeline_and_model()
 
+    # load image
     image = Image.open('waterpump_img.png')
 
-
-    # side bar and title
+    # sidebar and title
     st.sidebar.header('Water Pump Features')
 
     # Display header and image
@@ -38,6 +38,8 @@ def main():
         st.title("Predicting Functionality of Water Pump App")
     #st.header('Predicting Functionality of Water Pump App')
    
+
+   # add text
     st.write('Predict the functionality of water pumps in Tanzania with the XGBoost model!')
     st.write('To access the codebase for this application, please visit the following GitHub repository: https://github.com/anair123/Detecting-Faulty-Water-Pumps-With-Machine-Learning')
 
@@ -69,7 +71,7 @@ def main():
        'quality_group', 'quantity_group', 'source_class',
        'waterpoint_type_group', 'age'])
     
-
+    # store input features in a pandas data frame
     input_features.loc[0] = [amount_tsh, funder, gps_height, installer, basin, region,
         population, public_meeting, scheme_management, permit,
         extraction_type_class, management_group, payment_type, quality_group,
@@ -90,7 +92,7 @@ def main():
                           1: 'Functional, but needs repair',
                           2: 'Not Functional'}
 
-
+        # show prediction with color depending on the outcome
         if prediction == 0:
             st.success(f'Water Pump Condition: {prediction_map[prediction]}')
         elif prediction == 1:
@@ -98,7 +100,6 @@ def main():
         elif prediction == 2:
             st.error(f'Water Pump Condition: {prediction_map[prediction]}') 
 
-    pass
 
 if __name__ == '__main__':
     main()
