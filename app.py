@@ -35,7 +35,7 @@ def main():
     with col1:
         st.image(image, use_column_width=True)
     with col2:
-        st.title("Predicting Functionality of Water Pump App")
+        st.title("Predicting Water Pump Functionality App")
     #st.header('Predicting Functionality of Water Pump App')
    
 
