@@ -3,4 +3,5 @@ local/
 water_pump.pem
 waterpump.pem
 venv
-hackathon_submission.py
+hackathon_submission.ipynb
+hackathon_submission.xlsx
