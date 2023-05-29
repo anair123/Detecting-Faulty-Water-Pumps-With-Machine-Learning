@@ -1,7 +1,6 @@
 # Detecting-Faulty-Water-Pumps-With-Machine-Learning
 
-![1_haY1-_3kNC06u6eri83jZw](https://github.com/anair123/Detecting-Faulty-Water-Pumps-With-Machine-Learning/assets/47230033/912d3ca1-2dd2-46b5-b85e-f8c37a23dfef)
-
+![0_dmkRCHxtvfKXwZPf](https://github.com/anair123/Detecting-Faulty-Water-Pumps-With-Machine-Learning/assets/47230033/035aff18-3de3-49f1-aade-36dbbced66e2)
 
 # Inspiration
 This project is inspired by the Pump it Up: Data Mining the Water Table competition hosted by DrivenData. 
