@@ -10,6 +10,9 @@ This project is inspired by the Pump it Up: Data Mining the Water Table competit
 Tanzania currently suffers from a severe water crisis, with 28 percent of the population lacking access to safe water. One feasible way to combat this crisis is to ensure that the water pumps installed across the country remain functional. 
 Using the data procured by Taarifa, which aggregates data from the Tanzania Ministry of Water, there is an opportunity to leverage machine learning to detect water pumps that are non-functional or need repair.
 
+# Objective
+The aim of this project is to train and deploy a machine learning model that predicts whether a water pump is functional, non-functional, or functional but needs repair.
+
 # Web application
 The machine learning model that has been built is incorporated into a Streamlit application, which has been hosted with Heroku. You can use the model yourself by visiting the following link: https://water-pump-functionality-app.herokuapp.com/. 
 
