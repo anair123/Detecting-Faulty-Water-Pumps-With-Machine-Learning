@@ -17,7 +17,7 @@ The aim of this project is to train and deploy a machine learning model that pre
 The machine learning model that has been built is incorporated into a Streamlit application, which has been hosted with Heroku. You can use the model yourself by visiting the following link: https://water-pump-functionality-app.herokuapp.com/. 
 
 # Learn more about this project on Medium
-For a step-by-step breakdown on how the project was conducted, check out the following article: 
+For a step-by-step breakdown on how the project was conducted, check out the following article: https://towardsdatascience.com/predicting-the-functionality-of-water-pumps-with-xgboost-8768b07ac7bb#923e
 
 # Author
 Aashish Nair  
